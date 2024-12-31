@@ -45,7 +45,7 @@ def main():
             image_url = image["urls"]["regular"]
             cols[j].image(image_url)
             image_data = unsplash.download_image(image_url)
-            st.download_button(f"Download {i + 1}", image_data, file_name=f"image_{i + 1}.jpg", mime="image/jpeg")
+            #st.download_button(f"Download {i + 1}", image_data, file_name=f"image_{i + 1}.jpg", mime="image/jpeg")
             open_in_new_tab_button = f"""
                 <a href="{image_url}" target="_blank">
                     <button class="custom-button">Open Image {i + 1} in New Tab</button>
