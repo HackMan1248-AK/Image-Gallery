@@ -43,7 +43,7 @@ def main():
         cols = st.columns(3)
         for j, image in enumerate(gallery[i:i+3]):
             cols[j].image(image["urls"]["regular"])
-            image_data = unspash.download_image(image_url)
+            image_data = unsplash.download_image(image_url)
             st.download_button(f"Download {i + 1}", image_data, file_name=f"image_{i + 1}.jpg", mime="image/jpeg")
             open_in_new_tab_button = f"""
                 <a href="{image_url}" target="_blank">
